@@ -2,6 +2,7 @@ package com.fileUpload.demo.service;
 
 import com.fileUpload.demo.entity.Attachment;
 import com.fileUpload.demo.repository.AttachmentRepository;
+import com.fileUpload.demo.service.errorHandler.Handler;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
@@ -9,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 public class AttachmentServiceImpl implements AttachmentService{
     private AttachmentRepository attachmentRepository;
+    private Handler handler;
     public AttachmentServiceImpl(AttachmentRepository attachmentRepository) {
         this.attachmentRepository = attachmentRepository;
     }
@@ -26,6 +28,8 @@ public class AttachmentServiceImpl implements AttachmentService{
                     file.getBytes());
             return attachmentRepository.save(attachment);
         }catch (Exception e) {
+            Handler.handleError(e);
+
             throw new Exception("Could not save File: " + fileName);
         }
     }
@@ -35,5 +39,10 @@ public class AttachmentServiceImpl implements AttachmentService{
         return attachmentRepository
                 .findById(fileID)
                 .orElseThrow(() -> new Exception("File not found with Id: " + fileID));
+    }
+
+    @Override
+    public Exception notImplemented(string mp3) throws Exception{
+        return new Exception("Sorry!!"+mp3+" it's not implemented!!");
     }
 }
