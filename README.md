@@ -6,7 +6,7 @@ This application allows users to download files. Below are some of the possible 
 ## Errors
 
 ### 1. File Not Found (HTTP 404)
-   - **Endpoint:** `/download/file-not-found`
+   - **Endpoint:** `/download/mp3/music.mp3`
    - **Description:** Attempting to download a file that does not exist.
    - **Error Message:** Error 404 - File not found 🚫📄
 
