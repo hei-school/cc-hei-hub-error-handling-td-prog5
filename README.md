@@ -1,1 +1,23 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/wTBA-Etm)
+# Upload and Download Management with Custom Error Handling
+
+This Spring Boot application utilizes the Lombok framework to simplify code and provides functionality for uploading and downloading files with custom error handling.
+
+## Technologies Used
+
+- Java
+- Spring Boot
+- Lombok
+
+## Prerequisites
+
+- Java 17
+- Maven
+- Web browser
+- Postman
+
+## Features
+
+- **File Upload:** Users can upload files through the application.
+- **File Download:** Uploaded files can be downloaded.
+- **Custom Error Handling:** Custom errors are returned for specific situations, such as file already existing, invalid file type, file size exceeding the limit, etc.
+
