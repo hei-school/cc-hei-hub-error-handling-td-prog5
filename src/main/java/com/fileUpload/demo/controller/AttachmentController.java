@@ -47,4 +47,11 @@ public class AttachmentController {
                         "attachment; filename=\"" + attachment.getFileName() + "\"")
                 .body(new ByteArrayResource(attachment.getData()));
     }
+
+    // exemple for download mp3 or this methode is not implemented
+    @GetMapping("/download/mp3/{filename}")
+    public ResponseEntity<String> downloadForImplementationNotExist(@PathVariable String filename) throws Exception {
+
+        return ResponseEntity.status(HttpStatus.NOT_IMPLEMENTED).body("It is not yet implemented.");
+    }
 }

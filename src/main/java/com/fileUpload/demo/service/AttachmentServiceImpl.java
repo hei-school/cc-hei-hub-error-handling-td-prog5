@@ -40,4 +40,9 @@ public class AttachmentServiceImpl implements AttachmentService{
                 .findById(fileID)
                 .orElseThrow(() -> new Exception("File not found with Id: " + fileID));
     }
+
+    @Override
+    public Exception notImplemented(string mp3) throws Exception{
+        return new Exception("Sorry!!"+mp3+" it's not implemented!!");
+    }
 }
