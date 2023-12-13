@@ -21,5 +21,5 @@ This Spring Boot application utilizes the Lombok framework to simplify code and 
 - **File Download:** Uploaded files can be downloaded.
 - **Custom Error Handling:** Custom errors are returned for specific situations, such as file already existing, invalid file type, file size exceeding the limit, etc.
 ## Participation
-[Vohizy](https://github.com/Vohizy)
+[Vohizy](https://github.com/Vohizy) and 
 [jaonary-74](https://github.com/jaonary-74)
